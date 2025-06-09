@@ -29,10 +29,10 @@ const { pathname } = Astro.url;
 <!-- Side Navigation (for small screens only) -->
 <div id="sideNav" class="sidenav">
   <a href="javascript:void(0)" class="closebtn" onclick="toggleSideNav()">&times;</a>
-  <a href="#home">Home</a>
-  <a href="#projects">Projects</a>
-  <a href="#aboutus">About Us</a>
-  <a href="#contact">Contact Us</a>
+  <a href="/" class={pathname === '/' ? 'active' : ''}>Home</a>
+  <a href="/projects" class={pathname === '/projects' ? 'active' : ''}>Projects</a>
+  <a href="/aboutus" class={pathname === '/aboutus' ? 'active' : ''}>About Us</a>
+  <a href="/contactus" class={pathname === '/contactus' ? 'active' : ''}>Contact Us</a>
 </div>
 
 <script is:inline>
