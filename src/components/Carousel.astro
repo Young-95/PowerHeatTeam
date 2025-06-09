@@ -1,0 +1,73 @@
+
+<div class="wrapper">
+  <h1>Here's one we did earlier</h1>
+  <div class="scroll-container" id="carouselTrack">
+      <img src="./boiler_2.jpg" alt="">
+      <img src="./fusebox_2.jpeg" alt="">
+      <img src="./giveenergy.jpeg" alt="">
+      <img src="./heat_pump.jpg" alt="">
+      <img src="./neat_2.jpg" alt="">
+      <img src="./solis.jpeg" alt="">
+      <img src="./neat.jpg" alt="">
+      <img src="./boiler_3.jpg" alt="">
+    </div>
+  </div>
+
+<style>
+
+.wrapper {
+  width: 100%;
+  margin-top: 5%;
+  padding: 5% 0;
+  border-top: 2px solid black;
+  border-bottom: 2px solid black;
+  background-color: orange;
+}
+
+h1 {
+  text-align: center;
+  margin-bottom: 2rem;
+  color: white;
+}
+
+.scroll-container {
+  display: flex;
+  width: 50vw;
+  height: 50vh;
+  margin: 0 auto;
+  overflow-x: scroll;
+  overflow-y: hidden;
+  scroll-snap-type: x mandatory;
+  scroll-behavior: smooth;
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: none;
+}
+
+.scroll-container::-webkit-scrollbar {
+  display: none;
+}
+
+.scroll-container img {
+  flex-shrink: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  scroll-snap-align: start;
+}
+
+
+</style>
+
+<script>
+  const track = document.getElementById("carouselTrack");
+  let scrollAmount = track.clientWidth;
+
+  setInterval(() => {
+    if ((track.scrollLeft + scrollAmount) >= track.scrollWidth) {
+
+      track.scrollTo({ left: 0, behavior: "smooth" });
+    } else {
+      track.scrollBy({ left: scrollAmount, behavior: "smooth" });
+    }
+  }, 4000);
+</script>

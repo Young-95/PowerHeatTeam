@@ -1,0 +1,44 @@
+---
+const { pathname } = Astro.url;
+---
+        
+<div class="flex-container header">
+  <div class="flex-item">
+    <a href="#"><img class="logo" src="./cropped-logo.png.webp" /></a>
+  </div>
+
+  <!-- Top Nav (visible on larger screens) -->
+  <div class="flex-item topnav" id="myTopnav">
+      <a href="/" class={pathname === '/' ? 'active' : ''}>Home</a>
+      <a href="/projects" class={pathname === '/projects' ? 'active' : ''}>Projects</a>
+      <a href="/aboutus" class={pathname === '/aboutus' ? 'active' : ''}>About Us</a>
+  </div>
+
+  <!-- Hamburger icon (visible on small screens) -->
+  <div class="flex-item mobile-menu">
+    <a href="javascript:void(0);" class="icon" onclick="toggleSideNav()">
+      <i class="fa fa-bars"></i>
+    </a>
+  </div>
+
+  <div class="flex-item">
+    <button class="topnav-cta-button cta-button">Contact Us</button>
+  </div>
+</div>
+
+<!-- Side Navigation (for small screens only) -->
+<div id="sideNav" class="sidenav">
+  <a href="javascript:void(0)" class="closebtn" onclick="toggleSideNav()">&times;</a>
+  <a href="#home">Home</a>
+  <a href="#projects">Projects</a>
+  <a href="#aboutus">About Us</a>
+  <a href="#contact">Contact Us</a>
+</div>
+
+<script is:inline>
+  function toggleSideNav() {
+    const nav = document.getElementById("sideNav");
+    nav.style.width = nav.style.width === "250px" ? "0" : "250px";
+  }
+</script>
+

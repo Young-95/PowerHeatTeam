@@ -1,0 +1,62 @@
+---
+---
+<div class="wrapper">
+    <h1>Services</h1>
+    <div class="flex-container">
+        <div class="flex-item">
+            <img src="./bulb.png" alt="">
+            <h2>Electrical</h2>
+        </div>
+        <div class="flex-item">
+            <img src="./boiler.png" alt="">
+            <h2>Heating</h2>       
+        </div>
+        <div class="flex-item">
+            <img src="./pipe.png" alt="">
+            <h2>Plumbing</h2>
+        </div>
+    </div>
+</div>
+
+
+<style>
+
+    .wrapper {
+        margin: 5% auto;
+        padding: 2% 0;
+    }
+
+    h1 {
+        text-align: center;
+        text-decoration: underline;
+    }
+
+    .flex-container {
+        display: flex;
+        flex-direction: row;
+        margin: 0 5%;
+    }
+
+    .flex-item {
+        flex-direction: column;
+        justify-items: center;
+        align-content: center;
+        text-align: center;
+        margin: 3% auto;
+    }
+
+    .flex-item:hover {
+  transform: translateY(-5px);
+}
+
+
+    @media screen and (width < 1500px) {
+    .flex-container {
+        flex-direction: column;
+        }
+
+    .flex-item {
+        margin-inline: 20vw;
+    }
+    }
+</style>

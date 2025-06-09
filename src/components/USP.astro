@@ -1,0 +1,55 @@
+---
+---
+
+<div class="flex-container">
+    <div class="flex-item">
+        <img src="./customer.png" alt="">
+        <h2>Work to Meet Your Personal Needs</h2>
+        <p>Our highly skilled workers set reliable schedules, making long waiting times and time-consuming inquiries a thing of the past.</p>
+    </div>
+    <div class="flex-item">
+        <img src="./work.png" alt="">
+        <h2>Reliable Work – Quick and Flexible</h2>
+        <p>We handle all aspects of Electrical, Plumbing, Heating, and Renewable systems — from full installations and upgrades to Solar PV, Battery Storage, and Air Source Heat Pumps — tailored to your property for comfort and energy savings.</p>
+    </div>
+    <div class="flex-item">
+        <img src="./satisfied.png" alt="">
+        <h2>Our Promise: Satisfaction Guaranteed</h2>
+        <p>We always aim to satisfy our customers and give them the quality of service we would expect for our own family and friends. If you are not happy with our work, we will rectify the situation as soon as possible.</p>
+    </div>
+</div>
+<button class="cta-button">Get a Qoute</button>
+
+
+<style>
+
+
+    .flex-container {
+        display: flex;
+        flex-direction: row;
+        margin: 0 5%;
+    }
+
+    .flex-item {
+        flex-direction: column;
+        justify-items: center;
+        align-content: center;
+        text-align: center;
+        margin: 3% 10%;
+    }
+
+    .cta-button {
+        display: block;
+        margin: 0 auto;
+    }
+
+    @media screen and (width < 1500px) {
+    .flex-container {
+        flex-direction: column;
+        }
+
+    .flex-item {
+        margin-inline: 20vw;
+    }
+    }
+</style>
