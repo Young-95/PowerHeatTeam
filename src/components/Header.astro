@@ -1,44 +1,66 @@
 ---
 const { pathname } = Astro.url;
+
 ---
-        
+<!-- Header Container -->
 <div class="flex-container header">
+  <!-- Logo -->
   <div class="flex-item">
-    <a href="#"><img class="logo" src="./cropped-logo.png.webp" /></a>
+    <a href="/"><img class="logo" src="../../public/cropped-logo.png.webp" /></a>
   </div>
 
-  <!-- Top Nav (visible on larger screens) -->
+  <!-- Desktop Nav -->
   <div class="flex-item topnav" id="myTopnav">
-      <a href="/" class={pathname === '/' ? 'active' : ''}>Home</a>
-      <a href="/projects" class={pathname === '/projects' ? 'active' : ''}>Projects</a>
-      <a href="/aboutus" class={pathname === '/aboutus' ? 'active' : ''}>About Us</a>
+    <a href="/" class={pathname === '/' ? 'active' : ''}>Home</a>
+
+    <!-- Dropdown for Services -->
+    <div class="dropdown">
+      <a href="/services" class={`dropdown-toggle ${pathname.startsWith('/services') ? 'active' : ''}`}>
+        Services <span class="arrow">&#9662;</span>
+      </a>
+      <div class="dropdown-content">
+        <a href="/services/electrical" class={pathname === '/services/electrical' ? 'active' : ''}>Electrical</a>
+        <a href="/services/plumbing" class={pathname === '/services/plumbing' ? 'active' : ''}>Plumbing</a>
+        <a href="/services/heating" class={pathname === '/services/heating' ? 'active' : ''}>Heating</a>
+      </div>
+    </div>
+
+    <a href="/aboutus" class={pathname === '/aboutus' ? 'active' : ''}>About Us</a>
   </div>
 
-  <!-- Hamburger icon (visible on small screens) -->
+  <!-- Mobile Burger Menu -->
   <div class="flex-item mobile-menu">
     <a href="javascript:void(0);" class="icon" onclick="toggleSideNav()">
       <i class="fa fa-bars"></i>
     </a>
   </div>
 
+  <!-- Desktop CTA Button -->
   <div class="flex-item">
     <button class="topnav-cta-button cta-button">Contact Us</button>
   </div>
 </div>
 
-<!-- Side Navigation (for small screens only) -->
+<!-- Mobile Side Navigation -->
 <div id="sideNav" class="sidenav">
   <a href="javascript:void(0)" class="closebtn" onclick="toggleSideNav()">&times;</a>
   <a href="/" class={pathname === '/' ? 'active' : ''}>Home</a>
-  <a href="/projects" class={pathname === '/projects' ? 'active' : ''}>Projects</a>
+  <a href="/services" class={pathname.startsWith('/services') ? 'active' : ''}>Services</a>
+  <a href="/services/electrical">— Electrical</a>
+  <a href="/services/plumbing">— Plumbing</a>
+  <a href="/services/heating">— Heating</a>
   <a href="/aboutus" class={pathname === '/aboutus' ? 'active' : ''}>About Us</a>
   <a href="/contactus" class={pathname === '/contactus' ? 'active' : ''}>Contact Us</a>
 </div>
 
+<!-- Script -->
 <script is:inline>
   function toggleSideNav() {
     const nav = document.getElementById("sideNav");
     nav.style.width = nav.style.width === "250px" ? "0" : "250px";
   }
 </script>
+
+<!-- Include Font Awesome (place once globally in your layout file) -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 

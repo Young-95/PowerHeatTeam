@@ -1,0 +1,27 @@
+---
+// BaseLayout.astro
+import Header from '../components/Header.astro';
+import '../styles/global.css';
+---
+
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Powerheat Team</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+    
+  </head>
+
+  <body>
+   <Header />
+   		<marquee behavior="scroll" direction="left">
+		<div class="marquee-container">
+			🚿 Plumbing &nbsp;&nbsp;&nbsp; • &nbsp;&nbsp;&nbsp;🔥 Heating &nbsp;&nbsp;&nbsp; • &nbsp;&nbsp;&nbsp;⚡ Electrical Services &nbsp;&nbsp;&nbsp; • &nbsp;&nbsp;&nbsp; 24/7 Emergency Callouts &nbsp;&nbsp;&nbsp; • &nbsp;&nbsp;&nbsp; Trusted Local Experts &nbsp;&nbsp;&nbsp; • &nbsp;&nbsp;&nbsp; Affordable Rates &nbsp;&nbsp;&nbsp; • &nbsp;&nbsp;&nbsp; Call Us Today: Electrical: 07519662153 Plumbing & Heating: 07958112881
+		</div>
+		</marquee>
+    <main>
+      <slot />
+    </main>
+  </body>
+</html>

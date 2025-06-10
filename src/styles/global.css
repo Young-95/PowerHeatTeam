@@ -60,6 +60,62 @@ a.active {
   
 }
 
+/* Topnav dropdown */
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: white;
+  min-width: 160px;
+  z-index: 1;
+  box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+.dropdown-content a {
+  display: block;
+  padding: 0.75rem 1rem;
+  text-decoration: none;
+  color: black;
+}
+
+.dropdown-content a:hover {
+  background-color: #f2f2f2;
+}
+
+
+/* Mobile sidenav submenu */
+.sidenav-dropdown .sidenav-submenu {
+  padding-left: 1rem;
+}
+
+.sidenav-submenu a {
+  display: block;
+  font-size: 1rem;
+  padding: 0.5rem 0;
+}
+
+.arrow {
+  margin-left: 5px;
+  font-size: 0.75em;
+}
+
+/* Optional: rotate on hover */
+.dropdown:hover .arrow {
+  transform: rotate(180deg);
+  transition: transform 0.2s ease;
+}
+
+
+
+
 
 /* Call to action */
 
