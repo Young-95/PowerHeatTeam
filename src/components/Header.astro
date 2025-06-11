@@ -6,7 +6,7 @@ const { pathname } = Astro.url;
 <div class="flex-container header">
   <!-- Logo -->
   <div class="flex-item">
-    <a href="/"><img class="logo" src="/cropped-logo.png.webp" /></a>
+    <a href="/"><img class="logo" src="/cropped-logo.png.webp" alt="PowerHeat Team Logo" /></a>
   </div>
 
   <!-- Desktop Nav -->
@@ -22,6 +22,7 @@ const { pathname } = Astro.url;
         <a href="/services/electrical" class={pathname === '/services/electrical' ? 'active' : ''}>Electrical</a>
         <a href="/services/plumbing" class={pathname === '/services/plumbing' ? 'active' : ''}>Plumbing</a>
         <a href="/services/heating" class={pathname === '/services/heating' ? 'active' : ''}>Heating</a>
+        <a href="/services/renewables" class={pathname === '/services/renewables' ? 'active' : ''}>Renewables</a>
       </div>
     </div>
 
@@ -49,18 +50,14 @@ const { pathname } = Astro.url;
   <a href="/services/electrical">— Electrical</a>
   <a href="/services/plumbing">— Plumbing</a>
   <a href="/services/heating">— Heating</a>
+  <a href="/services/renewables">— Renewables</a>
   <a href="/aboutus" class={pathname === '/aboutus' ? 'active' : ''}>About Us</a>
   <a href="/contactus" class={pathname === '/contactus' ? 'active' : ''}>Contact Us</a>
 </div>
 
-<!-- Script -->
 <script is:inline>
   function toggleSideNav() {
     const nav = document.getElementById("sideNav");
     nav.style.width = nav.style.width === "250px" ? "0" : "250px";
   }
 </script>
-
-<!-- Include Font Awesome (place once globally in your layout file) -->
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-

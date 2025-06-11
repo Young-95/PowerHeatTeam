@@ -1,0 +1,83 @@
+<div class="testimonial-wrapper">
+  <h1>What our customers think</h2>
+  <div class="testimonial-carousel" id="testimonialCarousel">
+    <div class="testimonial-slide">
+      <p>"We're very happy with the work, and would recommend them to anyone. They've been friendly and helpful throughout the process, and have great technical knowledge and attention to detail."</p>
+    </div>
+    <div class="testimonial-slide">
+      <p>"They put in two new wall lights and fitted a centre light. Very helpful, smart, and professional. Will definitely use them again!"</p>
+    </div>
+    <div class="testimonial-slide">
+      <p>"Needed an emergency electrician and Phil arrived on time, on a Saturday evening. Very professional. Highly recommended."</p>
+    </div>
+    <div class="testimonial-slide">
+      <p>"Phil installed a hand dryer and towel rail. Punctual, hardworking, and emailed the certificate. Definitely using him again!"</p>
+    </div>
+  </div>
+</div>
+
+<style>
+.testimonial-wrapper {
+  width: 100%;
+  height: 50vh;
+  background: orange;
+  box-sizing: border-box;
+  text-align: center;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  border-top: 2px solid black;
+  border-bottom: 2px solid black;
+}
+
+.testimonial-wrapper h1 {
+  color: white;
+  margin-bottom: 5rem;
+  text-decoration: underline;
+}
+
+.testimonial-carousel {
+  display: flex;
+  transition: transform 0.6s ease-in-out;
+  width: 100%;
+}
+
+.testimonial-slide {
+  min-width: 100%;
+  box-sizing: border-box;
+}
+
+.testimonial-slide p {
+  max-width: 600px;
+  margin: 0 auto;
+  font-size: 1.5rem;
+  color:white;
+}
+</style>
+
+<script>
+  const carousel = document.getElementById('testimonialCarousel');
+  const slides = carousel.children;
+  let index = 0;
+  let intervalId;
+
+  function startCarousel() {
+    intervalId = setInterval(() => {
+      index = (index + 1) % slides.length;
+      carousel.style.transform = `translateX(-${index * 100}%)`;
+    }, 5000);
+  }
+
+  function stopCarousel() {
+    clearInterval(intervalId);
+  }
+
+  // Start on load
+  startCarousel();
+
+  // Pause on hover
+  carousel.addEventListener('mouseenter', stopCarousel);
+  carousel.addEventListener('mouseleave', startCarousel);
+</script>

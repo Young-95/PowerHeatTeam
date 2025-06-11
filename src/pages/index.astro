@@ -1,15 +1,17 @@
 ---
+import '../styles/global.css';
 import BaseLayout from '../layouts/BaseLayout.astro';
 import Hero from '../components/Hero.astro';
 import Services from '../components/Services.astro';
 import Carousel from '../components/Carousel.astro';
 import USP from '../components/USP.astro';
-import '../styles/global.css';
+import Testimonials from '../components/Testimonials.astro';
 ---
 <BaseLayout>
 		<Hero />
+		<Services />
+		<Testimonials />
 		<USP />
 		<Carousel />
-		<Services />
 </BaseLayout>
 
