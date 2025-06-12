@@ -2,6 +2,8 @@
 const { pathname } = Astro.url;
 
 ---
+
+<header>
 <!-- Header Container -->
 <div class="flex-container header">
   <!-- Logo -->
@@ -36,12 +38,12 @@ const { pathname } = Astro.url;
     </a>
   </div>
 
+
   <!-- Desktop CTA Button -->
   <div class="flex-item">
     <button class="topnav-cta-button cta-button">Contact Us</button>
   </div>
 </div>
-
 <!-- Mobile Side Navigation -->
 <div id="sideNav" class="sidenav">
   <a href="javascript:void(0)" class="closebtn" onclick="toggleSideNav()">&times;</a>
@@ -54,6 +56,12 @@ const { pathname } = Astro.url;
   <a href="/aboutus" class={pathname === '/aboutus' ? 'active' : ''}>About Us</a>
   <a href="/contactus" class={pathname === '/contactus' ? 'active' : ''}>Contact Us</a>
 </div>
+<marquee behavior="scroll" direction="left">
+		<div class="marquee-container">
+			🚿 Plumbing &nbsp;&nbsp;&nbsp; • &nbsp;&nbsp;&nbsp;🔥 Heating &nbsp;&nbsp;&nbsp; • &nbsp;&nbsp;&nbsp;⚡ Electrical Services &nbsp;&nbsp;&nbsp; • &nbsp;&nbsp;&nbsp; 24/7 Emergency Callouts &nbsp;&nbsp;&nbsp; • &nbsp;&nbsp;&nbsp; Trusted Local Experts &nbsp;&nbsp;&nbsp; • &nbsp;&nbsp;&nbsp; Affordable Rates &nbsp;&nbsp;&nbsp; • &nbsp;&nbsp;&nbsp; Call Us Today: Electrical: 07519662153 Plumbing & Heating: 07958112881
+		</div>
+</marquee>
+</header>
 
 <script is:inline>
   function toggleSideNav() {
