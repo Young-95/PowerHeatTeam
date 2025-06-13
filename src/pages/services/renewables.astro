@@ -4,5 +4,78 @@ import '../../styles/global.css';
 ---
 
 <BaseLayout>
+    <div class="services-wrapper">
+    <h1>Renewables</h1>
+    <h2>What we offer</h2>
+    <div class="flex-container">
+        <div class="flex-item">
+            <img src="/wire.png" alt="wire icon">
+            <h3>Rewire</h3>
+        </div>
+        <div class="flex-item">
+            <img src="/upgrade.png" alt="upgrade icon">
+            <h3>Upgrades</h3>
+        </div>
+        <div class="flex-item">
+            <img src="/fuseboard.png" alt="fuse board icon">
+            <h3>Fuse Board</h3>
+        </div>
+        <div class="flex-item">
+            <img src="/light.png" alt="light icon">
+            <h3>Lighting</h3>
+        </div>
+        <div class="flex-item">
+            <img src="/socket.png" alt="socket icon">
+            <h3>Sockets</h3>
+        </div>
+        <div class="flex-item">
+            <img src="/shower.png" alt="shower icon">
+            <h3>Showers</h3>
+        </div>
+        <div class="flex-item">
+            <img src="/power.png" alt="power icon">
+            <h3>Bonding</h3>
+        </div>
+    </div>
+    </div>
+
+    <style>
+        .services-wrapper {
+            text-align: center;
+        }
+
+        h1 {
+            padding: 5vh 0;
+            margin: 0 auto;
+            font-size: 4rem;
+            border-top: 4px solid black;
+            border-bottom: 5px solid black;
+            border-inline: 3px solid black;
+            background: orange;
+        }
+
+        h2 {
+            margin: 10vh 0;
+            font-size: 3rem;
+        }
+
+        .flex-container {
+            display: flex;
+            flex-flow: row wrap;
+            margin: 0 10%;
+            justify-content: center;
+            align-items: center;
+            gap: 5%;
+        }
+
+        .flex-item img {
+            width: 100%;
+            height: auto;
+            max-width: 200px;
+            display: block;
+            margin: 0 auto;
+        }
+
+    </style>
 
 </BaseLayout>
