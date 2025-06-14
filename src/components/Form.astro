@@ -1,0 +1,92 @@
+---
+
+---
+<h1>Get in Touch</h1>
+<form action="">
+    <div class="form-group">
+        <label for="name">Name:</label>
+        <input required placeholder="Alan Shearer" type="text" id="name">
+    </div>
+    <div class="form-group">
+        <label for="number">Phone Number:</label>
+        <input required placeholder="*********09" type="tel" id="number" pattern="^(\+44\s?7\d{3}|\(?07\d{3}\)?)\s?\d{3}\s?\d{3}$">
+    </div>
+    <div class="form-group">
+        <label for="email">Email:</label>
+        <input required placeholder="email@address.co.uk" type="email" id="email" pattern="^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$">
+    </div>
+    <div class="form-group">
+        <label for="msg">Message:</label>
+        <textarea required id="msg" placeholder="Type your message..."></textarea>
+    </div>
+    <button>Send</button>
+</form>
+
+
+<style>
+
+    h1 {
+        font-size: 3rem;
+        text-align: center;
+    }
+
+    form {
+        height: 60vh;
+        margin: 0 auto;
+        width: 50vw;
+        gap: 5%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    @media  screen and (width > 800px) {
+        form {
+            width: 25vw;
+        }
+    }
+
+    .form-group {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+
+    input[type=text], input[type=tel], input[type=email], textarea#msg {
+    padding: 12px 20px;
+    margin: 8px 0;
+    width: 100%;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    }
+
+
+    input, textarea#msg{
+        outline: 3px solid grey;
+    }
+
+    input:not(:placeholder-shown):valid {
+        outline-color: green;
+    }
+
+    input:not(:placeholder-shown):invalid {
+        outline-color: red;
+    }
+
+    input:focus:invalid {
+        outline: yellow;
+    }
+
+    button {
+        width: 100%;
+        background-color: orange;
+        padding: 1rem;
+        border: 2px solid black;
+        border-radius: 20px;
+        font-size: 1.5rem; 
+    }
+
+</style>
