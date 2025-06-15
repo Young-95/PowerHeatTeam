@@ -38,13 +38,32 @@
         margin: 3% 10%;
     }
 
+    @media screen and (width < 800px) {
+        .flex-item img {
+            height: 10vh;
+        }
+
+        .flex-item h2 {
+            font-size: 1.25rem;
+        }
+
+        .flex-item p {
+            font-size: 0.75rem;
+        }
+
+        .cta-button {
+            padding: 0.5rem;
+            font-size: 1.25rem;
+        }
+    }
+
     .cta-button {
         display: block;
         margin: 0 auto;
     }
 
     .wrapper {
-        padding: 5% 0 5% 0;
+        padding: 5vh 0 10vh 0;
     }
 
     @media screen and (width < 1500px) {
