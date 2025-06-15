@@ -230,8 +230,8 @@ marquee {
 /* Hero styles */
 
 .hero {
-  background: url("./fuse_board.webp") no-repeat fixed center;
-  height: 77vh;
+  background: url("/fuse_board.webp") no-repeat fixed center;
+  height: 75vh;
   background-size: cover;
 }
 
