@@ -1,24 +1,91 @@
 ---
+import Form from "./Form.astro"
 ---
 
 <footer>
-    <div class="flex-container">
-        <div class="flex-item">
-            <form action="">
-                <label for="name">Name</label><br>
-                <input type="text" id="name" name="name"><br>
-                <label for="email">Email</label><br>
-                <input type="text" id="email" name="email"><br>
-                <label for="msg">Message</label><br>
-                <input type="text" id="msg" name="msg"><br>
-                <input type="submit" value="Submit">
-            </form>
+    <div class="footer-wrapper">
+        <div class="contact-wrapper">
+            <h1>Get in Touch</h1>
+            <p>Don’t hesitate to reach out with the contact information below, or send a message using the form.</p>
+            <div class="info-wrapper">
+                <div>
+                    <h2>Electrical</h2>
+                    <h3>Mobile: 07519662153</h3>
+                </div>
+                <div>
+                    <h2>Heating</h2>
+                    <h3>Mobile: 07958112881</h3>
+                </div>
+            </div>
         </div>
-        <div class="flex-item"></div>
-        <div class="flex-item"></div>
+        <div class="cta-wrapper">
+            <div><Form /></div>
+            <div>
+            <a href="https://www.facebook.com/Powerheatteam/"><img src="../facebook.png" alt="facebook icon"></a>
+            </div>
+        </div>
+    </div>
+        <div class="bottom-footer">
+        <p>
+        Copyright © <span id="year"></span>. All rights reserved.
+        Website designed by <a href="https://www.texpertsne.co.uk" target="_blank">Texperts NE</a>.
+        </p>
     </div>
 </footer>
 
+
 <style>
-    
+
+    footer {
+        background-color: orange;
+        border-top: 2px solid black;
+        
+    }
+
+    .footer-wrapper {
+        padding-inline: 5%;
+    }
+
+    .contact-wrapper {
+        text-align: center;
+        width: 100%;
+    }
+
+    .info-wrapper {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        margin-top: 2%;
+        gap: 5%;
+    }
+
+    .cta-wrapper {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        gap: 15vw;
+        align-items: center;
+        margin-top: 3%;
+        margin-inline: 20vw;
+    }
+
+   :global(.cta-wrapper button) {
+        background-color: white;
+        color: black;
+    }
+
+    .cta-wrapper img {
+        height: 10vh;
+    }
+
+    .bottom-footer {
+        text-align: center;
+        padding: 0.5vh 0 0.5vh 0;
+        background-color: grey;
+        border-top: 2px solid black;
+    }
 </style>
+
+<script>
+       document.getElementById('year').textContent = new Date().getFullYear();
+</script>

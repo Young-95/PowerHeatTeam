@@ -1,7 +1,6 @@
 ---
 
 ---
-<h1>Get in Touch</h1>
 <form action="">
     <div class="form-group">
         <label for="name">Name:</label>
@@ -17,7 +16,7 @@
     </div>
     <div class="form-group">
         <label for="msg">Message:</label>
-        <textarea required id="msg" placeholder="Type your message..."></textarea>
+        <textarea required id="msg" placeholder="How can we help?"></textarea>
     </div>
     <button>Send</button>
 </form>
@@ -25,13 +24,7 @@
 
 <style>
 
-    h1 {
-        font-size: 3rem;
-        text-align: center;
-    }
-
     form {
-        height: 60vh;
         margin: 0 auto;
         width: 50vw;
         gap: 5%;
@@ -39,6 +32,7 @@
         flex-direction: column;
         align-items: center;
         justify-content: center;
+        padding-bottom: 5%;
     }
 
     @media  screen and (width > 800px) {
@@ -68,16 +62,8 @@
         outline: 3px solid grey;
     }
 
-    input:not(:placeholder-shown):valid {
-        outline-color: green;
-    }
-
-    input:not(:placeholder-shown):invalid {
-        outline-color: red;
-    }
-
-    input:focus:invalid {
-        outline: yellow;
+    textarea#msg {
+        height: 100px;
     }
 
     button {
