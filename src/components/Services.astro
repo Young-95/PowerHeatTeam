@@ -43,13 +43,13 @@
         text-decoration: underline;
     }
 
-        .flex-container {
-            display: flex;
-            flex-flow: row wrap;
-            margin: 0 10%;
-            justify-content: center;
-            align-items: center;
-            gap: 10%;
+    .flex-container {
+        display: flex;
+        flex-flow: row wrap;
+        margin: 0 10%;
+        justify-content: center;
+        align-items: center;
+        gap: 10%;
         }
 
     .flex-item {
@@ -57,14 +57,23 @@
         justify-items: center;
         align-content: center;
         text-align: center;
-        margin: 3% 0;
+        margin: 0 auto;
     }
 
     .flex-item img {
-        height: 12rem;
+        height: 15vh;
     }
 
     .flex-item:hover {
         transform: translateY(-5px);
-}
+    }
+
+    @media screen and (width < 800px) {
+        .flex-item img {
+            height: 10vh;
+        }
+        .flex-item h2 {
+            font-size: 1.25rem;
+        }
+    }
 </style>
