@@ -5,5 +5,70 @@ import '../styles/global.css';
 ---
 
 <BaseLayout>
+    <h1>About Us</h1>
+    <div class="aboutus-wrapper">
+    <img src="/pht_van.png" alt="">
+    <div class="text-wrapper">
+    <p>We are a local family run business with over 20 years experience within the industry. Choose us to maintain and repair your Heating, Plumbing and Electrics, or install new. Our experienced Electricians, Heating engineers and Plumbers can help you with any problem, no matter how complex. Thanks to our extensive knowledge, flexible business hours, and availability on short notice, we are guaranteed to meet all your expectations. </p>
+    <p>With skilled staff and state-of-the-art tools, we work at the highest level at all times – for your satisfaction and a perfect home. All of our work is completed to all current standards and regulations, all certification and building notifications will be given after every job where necessary, and all work is backed by our good workmanship guarantees. We are registered with NAPIT, Gas Safe and government backed Trustmark.</p>
+    </div>
+</div>
     <Cert />
 </BaseLayout>
+
+<style>
+    .aboutus-wrapper {
+        display: flex;
+        padding-top: 3vh;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        border-top: 1px solid black;
+        background-color: orange;
+    }
+    .text-wrapper {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        padding-top: 2vh;
+        padding-bottom: 2vh;
+        margin: 0 20vw;
+        gap: 3vw;
+    }
+
+    p {
+        font-size: 1.25rem;
+        line-height: 1.75rem;
+    }
+
+    h1 {
+        font-size: 3rem;
+        border-bottom: 1px solid black;
+        margin: 0;
+        padding: 3vh 0 3vh 0;
+    }
+
+    img{
+        height: 35vh;
+        border: 1px solid black;
+    }
+
+    @media screen and (width < 800px) {
+        h1 {
+            font-size: 2.25rem;
+        }
+
+        img {
+            height: 25vh;
+        }
+
+        p {
+            font-size: 1rem;
+            line-height: normal;
+        }
+
+        .text-wrapper {
+            margin: 0 5vw;
+        }
+    }
+</style>
