@@ -1,0 +1,87 @@
+---
+
+---
+<div class="hero-wrapper">
+    <div class="hero-content-wrapper">
+        <h1>Electrical, Plumbing & Heating Specialists</h1>
+        <h2>A <span style="color:orange;">family run business</span> proudly serving <span style="color:orange;">Newcastle Upon Tyne</span></h2>
+        <h2>Back by <span style="color:orange;">over 30 years industry experience</span> in Electrical, Plumbing and Heating</h2>
+        <h2> Our commitment is simple: honest work, top-quality service, and <span style="color:orange;"> the same care we’d want for our own family.</span></h2>
+        <div class="cta-wrapper">
+            <div class="flex-item"><a href=href="tel:07519662153"><button class='cta-button'><img src="/phone.png" alt="">07519662153</button></a></div>  
+            <div class="flex-item"><a href="/contactus"><button class='cta-button'>Contact Us</button></a></div> 
+        </div>
+    </div>
+    <div class="hero-img-wrapper">
+        <img src="pht_van.png" alt="">
+    </div>
+</div>
+
+<style>
+    .hero-wrapper {
+        display: flex;
+        flex-direction: row;
+    }
+
+    .hero-content-wrapper {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        text-align: center;
+        margin-left: 2vw;
+        text-wrap: pretty;
+    }
+
+    h1 {
+        font-size: 3.5rem;
+        color: orange;
+    }
+
+    h2 {
+        font-size: 1.5rem;
+        text-align: center;
+    }
+
+    .cta-wrapper {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        gap: 5%;
+        margin-top: 2%;
+    }
+
+    .cta-button {
+        display: flex;
+        align-items: center;
+        padding: 1rem;
+        background-color: orange;
+    }
+
+    .cta-wrapper img {
+        height: 30px;
+        padding-right: 10px;
+        margin: 0 auto;
+    }
+
+    .hero-img-wrapper{
+        justify-content: center;
+        align-content: center;
+        margin: 0 auto;
+    }
+
+    .hero-img-wrapper img {
+        height: 50vh;
+        border: 2px solid black;
+        margin-top: 5vh;
+    }
+
+    @media screen and (width < 1200px) {
+        .hero-wrapper {
+        display: flex;
+        flex-direction: column;
+    }
+
+    
+
+    }
+</style>

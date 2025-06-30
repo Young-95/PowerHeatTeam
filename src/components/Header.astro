@@ -1,4 +1,5 @@
 ---
+import CTA from "./CTA.astro";
 const { pathname } = Astro.url;
 
 ---
@@ -31,6 +32,9 @@ const { pathname } = Astro.url;
     <a href="/aboutus" class={pathname === '/aboutus' ? 'active' : ''}>About Us</a>
   </div>
 
+<!-- <div class="flex-item"><h2>Electrical</h2><a href=href="tel:07519662153"><button class='cta-button'><img src="/phone.png" alt="">07519662153</button></a></div>  
+<div class="flex-item"><h2>Heating</h2><a href=href="tel:07958112881"><button class='cta-button'><img src="/phone.png" alt="">07958112881</button></a></div>   -->
+
   <!-- Mobile Burger Menu -->
   <div class="flex-item mobile-menu">
     <a href="javascript:void(0);" class="icon" onclick="toggleSideNav()">
@@ -56,12 +60,34 @@ const { pathname } = Astro.url;
   <a href="/aboutus" class={pathname === '/aboutus' ? 'active' : ''}>About Us</a>
   <a href="/contactus" class={pathname === '/contactus' ? 'active' : ''}>Contact Us</a>
 </div>
-<marquee behavior="scroll" direction="left">
+<!-- <marquee behavior="scroll" direction="left">
 		<div class="marquee-container">
 			🚿 Plumbing &nbsp;&nbsp;&nbsp; • &nbsp;&nbsp;&nbsp;🔥 Heating &nbsp;&nbsp;&nbsp; • &nbsp;&nbsp;&nbsp;⚡ Electrical Services &nbsp;&nbsp;&nbsp; • &nbsp;&nbsp;&nbsp; 24/7 Emergency Callouts &nbsp;&nbsp;&nbsp; • &nbsp;&nbsp;&nbsp; Trusted Local Experts &nbsp;&nbsp;&nbsp; • &nbsp;&nbsp;&nbsp; Affordable Rates &nbsp;&nbsp;&nbsp; • &nbsp;&nbsp;&nbsp; Call Us Today: Electrical: 07519662153 Plumbing & Heating: 07958112881
 		</div>
 </marquee>
-</header>
+</header> -->
+<CTA />
+
+<style>
+  header {
+    border-bottom: 2px solid black;
+  }
+
+  h2 {
+    color: orange;
+    text-align: center;
+  }
+
+  .cta-button {
+    display: flex;
+    align-content: center;
+  }
+  .cta-button img {
+        height: 30px;
+        padding-right: 10px;
+        margin: 0 auto;
+  }
+</style>
 
 <script is:inline>
   function toggleSideNav() {

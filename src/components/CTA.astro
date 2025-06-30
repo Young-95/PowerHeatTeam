@@ -1,0 +1,85 @@
+---
+---
+
+
+<div class="cta-bar-fancy">
+  <div class="cta-overlay"><span></span></div>
+  <div class="cta-content">
+    <div class="cta-item"><img src="/phone.png" alt="">CALL US TODAY!</div>
+    <div class="cta-item"><img src="/booking.png" alt="">BOOK NOW!</div>
+    <div class="cta-item"><img src="/email.png" alt="">EMAIL US NOW!</div>
+  </div>
+</div>
+
+<style>
+   body {
+  margin: 0;
+  background: #fff;
+  font-family: sans-serif;
+}
+
+.cta-bar-fancy {
+  position: relative;
+  background-color: rgb(253, 173, 25);
+  color: white;
+  font-weight: bold;
+  height: 80px;
+  overflow: hidden;
+}
+
+.cta-content {
+  display: flex;
+  height: 100%;
+  z-index: 2;
+  position: relative;
+}
+
+.cta-item {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.2em;
+  position: relative;
+} 
+
+.cta-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  pointer-events: none;
+}
+
+.cta-overlay::after {
+  content: "";
+  position: absolute;
+  height: 150%;
+  width: 30vw;
+  background-color: orange;
+  transform: skewX(-30deg);
+  top: -25%;
+}
+
+.cta-overlay::after {
+  left: 77%;
+}
+
+.cta-overlay span {
+  position: absolute;
+  height: 150%;
+  width: 200px;
+  background-color: orange;
+  transform: skewX(-30deg);
+  top: -25%;
+  left: 40%;
+}
+
+img {
+    height: 2rem;
+    padding-right: 2%;
+    fill: white;
+}
+</style>

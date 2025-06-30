@@ -4,12 +4,141 @@
         
         <div class="flex-container hero">
             <div class="overlay">
-                <div class="content">
-                    <h1 class="flex-item">Electrical, Plumbing & Heating Specialists</h1>
-                    <p>A local company founded by family. 20 years experience in Electrical, Plumbing and Heating. We strive to give our customers the same quality we would expect for our own family.</p>
-                    <div class="flex-item"><a href="/contactus"><button class='cta-button'>Contact Us</button></a></div>
+                <div class="cta-section">
+                    <div class="cta-stripes">                      
+                        <span></span><span></span><span></span><span></span></div>
+                    <div class="content">
+                        <h1 class="flex-item">Electrical, Plumbing & Heating Specialists</h1>
+                        <p>A local company founded by family. 20 years experience in Electrical, Plumbing and Heating. We strive to give our customers the same quality we would expect for our own family.</p>   
+                        <div class="usp-list">
+                            <div class="usp-item">
+                                <div><img src="check-mark.png" alt=""></div>
+                                <div>All our work is guaranteed for 12 Months</div>
+                            </div>
+                            <div class="usp-item">
+                                <div><img src="check-mark.png" alt=""></div>
+                                <div>We are available 24/7</div>
+                            </div>
+                            <div class="usp-item">
+                                <div><img src="check-mark.png" alt=""></div>
+                                <div>All our engineers are experienced & insured</div>
+                            </div>
+                            <div class="usp-item">
+                                <div><img src="check-mark.png" alt=""></div>
+                                <div>Skilled in all electrical, plumbing and heating jobs</div>
+                            </div>
+                        </div>
+                        <div class="flex-item"><a href="/contactus"><button class='cta-button'>Contact Us</button></a></div>         
+                    </div>
                 </div>
             </div>    
         </div>
+
+        <style>
+            .hero {
+  background: url("/hero_background.png") no-repeat center;
+  background-size: cover;
+  height: 75vh;
+  position: relative;
+  font-family: sans-serif;
+}
+
+.overlay {
+  background-color: rgba(128, 127, 127, 0.74);
+  height: 100%;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.cta-section {
+  position: relative;
+  width: 20vw;
+  height: 90.5%;
+  max-width: 1200px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  overflow: hidden;
+  padding: 2rem;
+}
+
+/* Stripes */
+.cta-stripes {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  z-index: 0;
+}
+
+.cta-stripes span {
+  position: absolute;
+  top: 0;
+  width: 120%;
+  height: 100%;
+  transform: skewX(-40deg);
+  z-index: 0;
+}
+
+.cta-stripes span:nth-child(1) {
+  left: 70%;
+  background-color: orange;
+}
+.cta-stripes span:nth-child(2) {
+  left: -20%;
+  background-color: rgb(253, 173, 25);
+}
+.cta-stripes span:nth-child(3) {
+  left: -55%;
+  background-color: orange;
+}
+.cta-stripes span:nth-child(4) {
+  left: -70%;
+  background-color: rgb(253, 173, 25);
+}
+
+.content {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: white;
+  max-width: 600px;
+  text-align: center;
+  gap: 1rem;
+}
+
+.usp-list {
+  margin-top: 1rem;
+}
+
+.usp-item {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-top: 0.75rem;
+}
+
+img {
+  height: 1rem;
+}
+
+@media screen and (max-width: 800px) {
+  .content {
+    width: 100%;
+    padding: 1rem;
+  }
+
+  .cta-section {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+        </style>
 
         
