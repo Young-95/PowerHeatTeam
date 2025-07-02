@@ -4,13 +4,12 @@
         
         <div class="flex-container hero">
             <div class="overlay">
-                <div class="cta-section">
-                    <div class="cta-stripes">                      
-                        <span></span><span></span><span></span><span></span></div>
-                    <div class="content">
-                        <h1 class="flex-item">Electrical, Plumbing & Heating Specialists</h1>
-                        <p>A local company founded by family. 20 years experience in Electrical, Plumbing and Heating. We strive to give our customers the same quality we would expect for our own family.</p>   
-                        <div class="usp-list">
+                    <div class="hero-content-wrapper">
+                      <h1 style="color: orange;">Electrical, Plumbing & Heating Specialists</h1>
+                      <h2>A <span style="color:orange;">family run business</span> proudly serving <span style="color:orange;">Newcastle Upon Tyne</span></h2>
+                      <h2>Back by <span style="color:orange;">over 30 years industry experience</span> in Electrical, Plumbing and Heating</h2>
+                      <h2> Our commitment is simple: honest work, top-quality service, and <span style="color:orange;"> the same care we’d want for our own family.</span></h2>
+                      <div class="usp-list">
                             <div class="usp-item">
                                 <div><img src="check-mark.png" alt=""></div>
                                 <div>All our work is guaranteed for 12 Months</div>
@@ -28,115 +27,103 @@
                                 <div>Skilled in all electrical, plumbing and heating jobs</div>
                             </div>
                         </div>
-                        <div class="flex-item"><a href="/contactus"><button class='cta-button'>Contact Us</button></a></div>         
-                    </div>
-                </div>
+                      <div class="cta-wrapper">
+                          <div class="flex-item"><a href=href="tel:07519662153"><button class='cta-button'><img src="/phone.png" alt="">07519662153</button></a></div>  
+                          <div class="flex-item"><a href="/contactus"><button class='cta-button'>Book A Callout</button></a></div> 
+                      </div>
+                  </div>
             </div>    
         </div>
 
         <style>
             .hero {
-  background: url("/hero_background.png") no-repeat center;
-  background-size: cover;
-  height: 75vh;
-  position: relative;
-  font-family: sans-serif;
-}
+            background: url("/hero_background.png") no-repeat center;
+            background-size: cover;
+            height: 75vh;
+            position: relative;
+            font-family: sans-serif;
+            color: white;
+          }
 
-.overlay {
-  background-color: rgba(128, 127, 127, 0.74);
-  height: 100%;
-  width: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
+          h1 {
+            font-size: 3rem;
+          }
 
-.cta-section {
-  position: relative;
-  width: 20vw;
-  height: 90.5%;
-  max-width: 1200px;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  overflow: hidden;
-  padding: 2rem;
-}
+          h2 {
+            font-size: 1.75rem;
+          }
 
-/* Stripes */
-.cta-stripes {
-  position: absolute;
-  top: 0;
-  left: 0;
-  height: 100%;
-  width: 100%;
-  z-index: 0;
-}
+          .overlay {
+            background-color: rgba(128, 127, 127, 0.87);
+            height: 100%;
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+          }
 
-.cta-stripes span {
-  position: absolute;
-  top: 0;
-  width: 120%;
-  height: 100%;
-  transform: skewX(-40deg);
-  z-index: 0;
-}
+          .hero-wrapper {
+              display: flex;
+              flex-direction: row;
+          }
 
-.cta-stripes span:nth-child(1) {
-  left: 70%;
-  background-color: orange;
-}
-.cta-stripes span:nth-child(2) {
-  left: -20%;
-  background-color: rgb(253, 173, 25);
-}
-.cta-stripes span:nth-child(3) {
-  left: -55%;
-  background-color: orange;
-}
-.cta-stripes span:nth-child(4) {
-  left: -70%;
-  background-color: rgb(253, 173, 25);
-}
+          .hero-content-wrapper {
+              display: flex;
+              flex-direction: column;
+              justify-content: center;
+              text-align: center;
+              text-wrap: pretty;
+          }
 
-.content {
-  position: relative;
-  z-index: 1;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  color: white;
-  max-width: 600px;
-  text-align: center;
-  gap: 1rem;
-}
+          .cta-wrapper {
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            gap: 5%;
+            margin-top: 2%;
+        }
 
-.usp-list {
-  margin-top: 1rem;
-}
+         .cta-button {
+            display: flex;
+            align-items: center;
+            padding: 1rem;
+            background-color: orange;
+    }
 
-.usp-item {
-  display: flex;
-  align-items: center;
-  gap: 1rem;
-  margin-top: 0.75rem;
-}
+        .cta-wrapper img {
+            height: 30px;
+            padding-right: 10px;
+            margin: 0 auto;
+    }
 
-img {
-  height: 1rem;
-}
+          .usp-list {
+            margin-top: 1rem;
+            font-size: 1.25rem;
+            margin-inline: auto;
+          }
 
-@media screen and (max-width: 800px) {
-  .content {
-    width: 100%;
-    padding: 1rem;
-  }
+          .usp-item {
+            display: flex;
+            justify-content: left;
+            align-items: center;
+            gap: 1rem;
+            margin-top: 0.75rem;
+          }
 
-  .cta-section {
-    flex-direction: column;
-    align-items: center;
-  }
+          img {
+            height: 1rem;
+          }
+
+          @media screen and (max-width: 800px) {
+            .content {
+              width: 100%;
+              padding: 1rem;
+            }
+
+          .cta-section {
+            flex-direction: column;
+            align-items: center;
+          }
 }
 
         </style>
