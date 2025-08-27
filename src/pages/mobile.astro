@@ -1,12 +1,13 @@
 ---
 import '../styles/global.css';
-import Form from '../components/Form.astro';
 ---
 
 <main>
     <img src="../cropped-logo.png.webp" alt="PowerHeat Team Logo" class="logo"/>
     <div class="content-wrapper">
-        <a href="/contactus"><button class='cta-button'>Book A Callout</button></a>
+        <div class="cta-container">
+            <a href="/contactus"><button class='cta-button'>Book A Callout</button></a>
+        </div>
         <div class="services-container">
             <a href="/services/electrical" class="icon-container">
                 <img src="./bulb.png" alt="bulb svg">
@@ -46,8 +47,7 @@ import Form from '../components/Form.astro';
 </main>
 
 <style>
-
-   main {
+main {
     display: flex;
     flex-direction: column;
     min-height: 100vh;
@@ -64,7 +64,7 @@ import Form from '../components/Form.astro';
 }
 
 .content-wrapper {
-    flex: 1; /* take remaining space */
+    flex: 1;
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
@@ -72,7 +72,7 @@ import Form from '../components/Form.astro';
 }
 
 .cta-button {
-    margin-top: 5rem;
+    margin-top: 4rem;
     padding: 2.5rem 4rem;
     font-size: 1.5rem;
     background-color: white;
@@ -86,7 +86,7 @@ import Form from '../components/Form.astro';
     align-items: center;
     gap: 2rem;
     padding: 2rem;
-    flex: 1; /* take up space, push certs down */
+    flex: 1;
 }
 
 .icon-container {
@@ -128,21 +128,18 @@ import Form from '../components/Form.astro';
 .cert-container {
     display: flex;
     justify-content: center;
-    align-items: start;
+    align-items: center;
     height: 15vh;
-    gap: 2rem;
-    padding: 3rem;
+    gap: 3rem;
+    padding: 1rem;
     border-top: 2px solid black;
     border-bottom: 2px solid black;
     background-color: white;
 }
-
 
 .cert-item img {
     max-height: 5vh;
     width: auto;
     object-fit: contain;
 }
-
-
 </style>
