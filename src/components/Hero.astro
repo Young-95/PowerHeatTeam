@@ -37,13 +37,14 @@
 
         <style>
             .hero {
-            background: url("/hero_background.png") no-repeat center;
-            background-size: cover;
-            height: 75vh;
-            position: relative;
-            font-family: sans-serif;
-            color: white;
-          }
+                background: url("/hero_background.png") no-repeat center;
+                background-size: cover;
+                min-height: 75vh;
+                position: relative;
+                font-family: sans-serif;
+                color: white;
+              }
+
 
           h1 {
             font-size: 3rem;
@@ -54,7 +55,9 @@
           }
 
           .overlay {
+            position: absolute;
             background-color: rgba(128, 127, 127, 0.87);
+            inset: 0;
             height: 100%;
             width: 100%;
             display: flex;
@@ -73,6 +76,7 @@
               justify-content: center;
               text-align: center;
               text-wrap: pretty;
+              margin: 0 5%;
           }
 
           .cta-wrapper {
