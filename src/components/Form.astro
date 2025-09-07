@@ -1,25 +1,34 @@
 ---
 
 ---
-<form action="">
-    <div class="form-group">
-        <label for="name">Name:</label>
-        <input required placeholder="Alan Shearer" type="text" id="name">
-    </div>
-    <div class="form-group">
-        <label for="number">Phone Number:</label>
-        <input required placeholder="*********09" type="tel" id="number" pattern="^(\+44\s?7\d{3}|\(?07\d{3}\)?)\s?\d{3}\s?\d{3}$">
-    </div>
-    <div class="form-group">
-        <label for="email">Email:</label>
-        <input required placeholder="email@address.co.uk" type="email" id="email" pattern="^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$">
-    </div>
-    <div class="form-group">
-        <label for="msg">Message:</label>
-        <textarea required id="msg" placeholder="How can we help?"></textarea>
-    </div>
-    <button>Send</button>
+<form name="contact" method="POST" data-netlify="true">
+  <input type="hidden" name="form-name" value="contact">
+
+  <div class="form-group">
+    <label for="name">Name:</label>
+    <input required placeholder="Alan Shearer" type="text" id="name" name="name">
+  </div>
+
+  <div class="form-group">
+    <label for="number">Phone Number:</label>
+    <input required placeholder="*********09" type="tel" id="number" name="number"
+      pattern="^(\+44\s?7\d{3}|\(?07\d{3}\)?)\s?\d{3}\s?\d{3}$">
+  </div>
+
+  <div class="form-group">
+    <label for="email">Email:</label>
+    <input required placeholder="email@address.co.uk" type="email" id="email" name="email"
+      pattern="^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$">
+  </div>
+
+  <div class="form-group">
+    <label for="msg">Message:</label>
+    <textarea required id="msg" name="message" placeholder="How can we help?"></textarea>
+  </div>
+
+  <button type="submit">Send</button>
 </form>
+
 
 
 <style>
